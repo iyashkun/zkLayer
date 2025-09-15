@@ -1,4 +1,4 @@
-import crypto from 'crypto'; // Use require since Node.js is being used
+import crypto from 'crypto';
 
 // Helper function to generate a 32-byte key from a password using PBKDF2
 function deriveKey(password, salt = crypto.randomBytes(16)) {
@@ -95,7 +95,7 @@ function layer3Decrypt(encryptedData, password) {
     return decryptedSecret;
 }
 
-// Example usage
+
 const secret = "This is my super secret message...!";
 const password = "mySecurePassword123";
 const encrypted = layer3Encrypt(secret, password);
